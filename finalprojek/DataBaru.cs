@@ -37,7 +37,7 @@ namespace finalprojek
             try
             {
                 koneksi.Open();
-                query = string.Format("SELECT * FROM data_pasien ORDER BY nama_pasien ASC");
+                query = string.Format("SELECT * FROM dataa_pasien ORDER BY nama_pasien ASC");
                 perintah = new MySqlCommand(query, koneksi);
                 adapter = new MySqlDataAdapter(perintah);
                 perintah.ExecuteNonQuery();
@@ -93,7 +93,7 @@ namespace finalprojek
         {
             try
             {
-                query = string.Format("UPDATE `data_pasien` SET `tempatlahir_pasien`='{0}',`nik_pasien`='{1}',`tanggallahir_pasien`='{2}',`jeniskelamin_pasien`='{3}',`sukuras_pasien`='{4}',`alamat_pasien`='{5}',`nomorhp_pasien`='{6}',`pekerjaan_pasien`='{7}' WHERE nama_pasien = '{8}'", TxtTempatLahir.Text, TxtNIK.Text, TxtTanggalLahir.Text, CbJenisKelamin.Text, TxtSukuRas.Text, TxtAlamatRumah.Text, TxtNomorHp.Text, TxtPekerjaan.Text, TxtNama.Text);
+                query = string.Format("UPDATE `dataa_pasien` SET `tempatlahir_pasien`='{0}',`nik_pasien`='{1}',`tanggallahir_pasien`='{2}',`jeniskelamin_pasien`='{3}',`sukuras_pasien`='{4}',`alamat_pasien`='{5}',`nomorhp_pasien`='{6}',`pekerjaan_pasien`='{7}' WHERE nama_pasien = '{8}'", TxtTempatLahir.Text, TxtNIK.Text, TxtTanggalLahir.Text, CbJenisKelamin.Text, TxtSukuRas.Text, TxtAlamatRumah.Text, TxtNomorHp.Text, TxtPekerjaan.Text, TxtNama.Text);
                 ds.Clear();
                 koneksi.Open();
                 perintah = new MySqlCommand(query, koneksi);
@@ -131,7 +131,7 @@ namespace finalprojek
             try
             {
                 koneksi.Open();
-                query = string.Format("DELETE FROM data_pasien WHERE nama_pasien = '{0}'", TxtNama.Text);
+                query = string.Format("DELETE FROM dataa_pasien WHERE nama_pasien = '{0}'", TxtNama.Text);
                 perintah = new MySqlCommand(query, koneksi);
                 adapter = new MySqlDataAdapter(perintah);
                 perintah.ExecuteNonQuery();
@@ -151,7 +151,7 @@ namespace finalprojek
             {
                 koneksi.Open();
 
-                query = string.Format("SELECT * FROM data_pasien WHERE nama_pasien = '{0}'", TxtNama.Text);
+                query = string.Format("SELECT * FROM dataa_pasien WHERE nama_pasien = '{0}'", TxtNama.Text);
                 perintah = new MySqlCommand(query, koneksi);
                 adapter = new MySqlDataAdapter(perintah);
                 perintah.ExecuteNonQuery();
@@ -201,7 +201,7 @@ namespace finalprojek
         {
             try
             {
-                query = string.Format("INSERT INTO `data_pasien`(`nama_pasien`, `tempatlahir_pasien`, `nik_pasien`, `tanggallahir_pasien`, `jeniskelamin_pasien`, `sukuras_pasien`, `alamat_pasien`, `nomorhp_pasien`, `pekerjaan_pasien`) VALUES ('{0}','{1}', '{2}','{3}','{4}','{5}','{6}','{7}','{8}')", TxtNama.Text, TxtTempatLahir.Text, TxtNIK.Text, TxtTanggalLahir.Text, CbJenisKelamin.Text, TxtSukuRas.Text, TxtAlamatRumah.Text, TxtNomorHp.Text, TxtPekerjaan.Text);
+                query = string.Format("INSERT INTO `dataa_pasien`(`nama_pasien`, `tempatlahir_pasien`, `nik_pasien`, `tanggallahir_pasien`, `jeniskelamin_pasien`, `sukuras_pasien`, `alamat_pasien`, `nomorhp_pasien`, `pekerjaan_pasien`) VALUES ('{0}','{1}', '{2}','{3}','{4}','{5}','{6}','{7}','{8}')", TxtNama.Text, TxtTempatLahir.Text, TxtNIK.Text, TxtTanggalLahir.Text, CbJenisKelamin.Text, TxtSukuRas.Text, TxtAlamatRumah.Text, TxtNomorHp.Text, TxtPekerjaan.Text);
 
                 koneksi.Open();
                 perintah = new MySqlCommand(query, koneksi);
@@ -230,6 +230,11 @@ namespace finalprojek
             Masuk utama = new Masuk();
             utama.Show();
             this.Hide();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void BtnNext_Click(object sender, EventArgs e)

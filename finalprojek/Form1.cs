@@ -37,7 +37,7 @@ namespace finalprojek
             }
             else
             {
-                MessageBox.Show("Salah input password");
+                MessageBox.Show("Salah masukan password");
             }
         }
 

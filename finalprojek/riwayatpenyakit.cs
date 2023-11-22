@@ -35,7 +35,7 @@ namespace finalprojek
             try
             {
                 koneksi.Open();
-                query = string.Format("SELECT * FROM riwayat_penyakit ORDER BY nama_pasien ASC");
+                query = string.Format("SELECT * FROM riwayatt_penyakit ORDER BY nama_pasien ASC");
                 perintah = new MySqlCommand(query, koneksi);
                 adapter = new MySqlDataAdapter(perintah);
                 perintah.ExecuteNonQuery();
@@ -152,7 +152,7 @@ namespace finalprojek
         {
             try
             {
-                query = string.Format("INSERT INTO `riwayat_penyakit`(`nama_pasien`, `gol_darah`, `tekanan_darah`, `penyakit_jantung`, `diabetes`, `haemopilia`, `hepatitis`, `gastring`, `penyakit_lainnya`, `alergi_obat`, `ada_alergi_obat`, `alergi_makanan`, `ada_alergi_makanan`) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')", TxtNama.Text, CBboxGolDarah.Text, TxtTekananDarah.Text, CBboxPenyakitJantung.Text, CBboxDiabetes.Text, CBboxHaemopilia.Text, CBboxHepatitis.Text, CBboxGastring.Text, TxtPenyakitLain.Text, CBboxAlergiObat.Text, TxtAdaAlergiObat.Text, CBboxAlergiMakanan.Text, TxtAdaAlergiMakanan.Text);
+                query = string.Format("INSERT INTO `riwayatt_penyakit`(`nama_pasien`, `gol_darah`, `tekanan_darah`, `penyakit_jantung`, `diabetes`, `haemopilia`, `hepatitis`, `gastring`, `penyakit_lainnya`, `alergi_obat`, `ada_alergi_obat`, `alergi_makanan`, `ada_alergi_makanan`) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')", TxtNama.Text, CBboxGolDarah.Text, TxtTekananDarah.Text, CBboxPenyakitJantung.Text, CBboxDiabetes.Text, CBboxHaemopilia.Text, CBboxHepatitis.Text, CBboxGastring.Text, TxtPenyakitLain.Text, CBboxAlergiObat.Text, TxtAdaAlergiObat.Text, CBboxAlergiMakanan.Text, TxtAdaAlergiMakanan.Text);
 
                 koneksi.Open();
                 perintah = new MySqlCommand(query, koneksi);
@@ -181,7 +181,7 @@ namespace finalprojek
             try
             {
                 koneksi.Open();
-                query = string.Format("DELETE FROM riwayat_penyakit WHERE nama_pasien = '{0}'", TxtNama.Text);
+                query = string.Format("DELETE FROM riwayatt_penyakit WHERE nama_pasien = '{0}'", TxtNama.Text);
                 perintah = new MySqlCommand(query, koneksi);
                 adapter = new MySqlDataAdapter(perintah);
                 perintah.ExecuteNonQuery();
@@ -217,7 +217,7 @@ namespace finalprojek
             try
             {
                 koneksi.Open();
-                query = string.Format("SELECT * FROM riwayat_penyakit WHERE nama_pasien = '{0}'", TxtNama.Text);
+                query = string.Format("SELECT * FROM riwayatt_penyakit WHERE nama_pasien = '{0}'", TxtNama.Text);
                 perintah = new MySqlCommand(query, koneksi);
                 adapter = new MySqlDataAdapter(perintah);
                 perintah.ExecuteNonQuery();
@@ -258,7 +258,7 @@ namespace finalprojek
         {
             try
             {
-                query = string.Format("UPDATE `riwayat_penyakit` SET `gol_darah`='{0}',`tekanan_darah`='{1}',`penyakit_jantung`='{2}',`diabetes`='{3}',`haemopilia`='{4}',`hepatitis`='{5}',`gastring`='{6}',`penyakit_lainnya`='{7}',`alergi_obat`='{8}',`ada_alergi_obat`='{9}',`alergi_makanan`='{10}',`ada_alergi_makanan`='{11}' WHERE nama_pasien = '{12}'", CBboxGolDarah.Text, TxtTekananDarah.Text, CBboxPenyakitJantung.Text, CBboxDiabetes.Text, CBboxHaemopilia.Text, CBboxHepatitis.Text, CBboxGastring.Text, TxtPenyakitLain.Text, CBboxAlergiObat.Text, TxtAdaAlergiObat.Text, CBboxAlergiMakanan.Text, TxtAdaAlergiMakanan.Text, TxtNama.Text);
+                query = string.Format("UPDATE `riwayatt_penyakit` SET `gol_darah`='{0}',`tekanan_darah`='{1}',`penyakit_jantung`='{2}',`diabetes`='{3}',`haemopilia`='{4}',`hepatitis`='{5}',`gastring`='{6}',`penyakit_lainnya`='{7}',`alergi_obat`='{8}',`ada_alergi_obat`='{9}',`alergi_makanan`='{10}',`ada_alergi_makanan`='{11}' WHERE nama_pasien = '{12}'", CBboxGolDarah.Text, TxtTekananDarah.Text, CBboxPenyakitJantung.Text, CBboxDiabetes.Text, CBboxHaemopilia.Text, CBboxHepatitis.Text, CBboxGastring.Text, TxtPenyakitLain.Text, CBboxAlergiObat.Text, TxtAdaAlergiObat.Text, CBboxAlergiMakanan.Text, TxtAdaAlergiMakanan.Text, TxtNama.Text);
 
                 ds.Clear();
                 koneksi.Open();
@@ -296,6 +296,11 @@ namespace finalprojek
             DataBaru utama = new DataBaru();
             utama.Show();
             this.Hide();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void BtnNext_Click(object sender, EventArgs e)
