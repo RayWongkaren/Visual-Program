@@ -139,3 +139,4 @@ C:\Users\ACER\source\repos\finalprojek\finalprojek\bin\Debug\Microsoft.VisualStu
 C:\Users\ACER\source\repos\finalprojek\finalprojek\bin\Debug\Microsoft.VisualStudio.GraphModel.xml
 C:\Users\ACER\source\repos\finalprojek\finalprojek\obj\Debug\finalprojek.Perawatan.resources
 C:\Users\ACER\source\repos\finalprojek\finalprojek\obj\Debug\finalprojek.ReportPerawatan.resources
+C:\Users\ACER\source\repos\finalprojek\finalprojek\obj\Debug\finalprojek.GantiPassword.resources

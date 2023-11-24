@@ -172,6 +172,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GantiPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GantiPassword.Designer.cs">
+      <DependentUpon>GantiPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="keadaan gigi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GantiPassword.resx">
+      <DependentUpon>GantiPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="keadaan gigi.resx">
       <DependentUpon>keadaan gigi.cs</DependentUpon>

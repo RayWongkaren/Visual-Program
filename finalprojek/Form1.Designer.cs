@@ -32,10 +32,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BtnMasuk = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.BtnGantiPassword = new System.Windows.Forms.Button();
+            this.TxtPassword = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -43,9 +44,10 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
+            this.groupBox1.Controls.Add(this.TxtPassword);
+            this.groupBox1.Controls.Add(this.BtnGantiPassword);
             this.groupBox1.Controls.Add(this.BtnMasuk);
             this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(781, 295);
@@ -58,9 +60,9 @@
             // 
             this.BtnMasuk.BackColor = System.Drawing.Color.White;
             this.BtnMasuk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMasuk.Location = new System.Drawing.Point(311, 315);
+            this.BtnMasuk.Location = new System.Drawing.Point(297, 315);
             this.BtnMasuk.Name = "BtnMasuk";
-            this.BtnMasuk.Size = new System.Drawing.Size(98, 41);
+            this.BtnMasuk.Size = new System.Drawing.Size(112, 52);
             this.BtnMasuk.TabIndex = 8;
             this.BtnMasuk.Text = "Masuk";
             this.BtnMasuk.UseVisualStyleBackColor = false;
@@ -77,16 +79,6 @@
             this.checkBox1.Text = "Show Password";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(106, 213);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(303, 30);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pictureBox1
             // 
@@ -119,6 +111,28 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Rekam Medis";
             // 
+            // BtnGantiPassword
+            // 
+            this.BtnGantiPassword.BackColor = System.Drawing.Color.White;
+            this.BtnGantiPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGantiPassword.Location = new System.Drawing.Point(106, 315);
+            this.BtnGantiPassword.Name = "BtnGantiPassword";
+            this.BtnGantiPassword.Size = new System.Drawing.Size(117, 52);
+            this.BtnGantiPassword.TabIndex = 9;
+            this.BtnGantiPassword.Text = "Ganti Password";
+            this.BtnGantiPassword.UseVisualStyleBackColor = false;
+            this.BtnGantiPassword.Click += new System.EventHandler(this.BtnGantiPassword_Click);
+            // 
+            // TxtPassword
+            // 
+            this.TxtPassword.BackColor = System.Drawing.Color.White;
+            this.TxtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPassword.Location = new System.Drawing.Point(106, 221);
+            this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.Size = new System.Drawing.Size(303, 30);
+            this.TxtPassword.TabIndex = 11;
+            this.TxtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -144,10 +158,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button BtnMasuk;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button BtnGantiPassword;
+        private System.Windows.Forms.TextBox TxtPassword;
     }
 }
 
